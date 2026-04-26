@@ -1,4 +1,4 @@
-# NeoLight's SIDC notebook
+# NeoLight's SICP notebook
 
 This is a small repository containing notes and programs while stuying the
 Structure and Interpretation of Computer Programs book.
