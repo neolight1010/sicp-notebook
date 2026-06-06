@@ -3,7 +3,7 @@
     (if (> a b)
         result
         (iter (next a) (+ result (term a)))))
-  (iter 1 0))
+  (iter a 0))
 
 (define (sum-cubes a b)
   (sum cube a inc b))
