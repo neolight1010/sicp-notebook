@@ -14,12 +14,11 @@
 
 ; iterative
 (define (cont-frac n d k)
-  (define (cont-frac-iter i prev-q)
-    (let ((q (/ (n (- i 1)) (+ (d (- i 1)) prev-q))
-             ))
-      (if (= i 1)
-          prev-q
-          (cont-frac-iter (- i 1) q))))
+  (define (cont-frac-iter i q)
+    (if (= i 1)
+        q
+        (let ((next-q (/ (n (- i 1)) (+ (d (- i 1)) q))))
+          (cont-frac-iter (- i 1) next-q))))
   
   (cont-frac-iter k (/ (n k) (d k))))
 
